@@ -8,8 +8,8 @@ services:
     container_name: cenv_simple
     volumes:
       - type: bind
-        source: .
-        target: /work
+        source: "./work"
+        target: "/work"
     stdin_open: true
     tty: true
-    working_dir: /work/src/build
+    working_dir: /work

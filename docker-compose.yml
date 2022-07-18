@@ -1,0 +1,15 @@
+version: "3.3"
+services:
+  cenv_simple:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cenv_simple
+    container_name: cenv_simple
+    volumes:
+      - type: bind
+        source: .
+        target: /work
+    stdin_open: true
+    tty: true
+    working_dir: /work/src/build
